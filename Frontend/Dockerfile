@@ -8,7 +8,8 @@ RUN ls -la
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY Frontend/front.py .
+COPY Frontend/. .
 
 # Expose port
 # EXPOSE 8501
