@@ -2,7 +2,7 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt 
+COPY Frontend/requirements.txt requirements.txt 
 
 RUN ls -la
 
