@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: backend
+    env: docker
+    dockerfilePath: ./Backend/Dockerfile
+    plan: free
+
+  - type: web
+    name: frontend
+    env: docker
+    dockerfilePath: ./Frontend/Dockerfile
+    envVars:
+      - key: BACKEND_URL
+        value: http://backend:10000/calculate_advance
+    plan: free
